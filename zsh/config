@@ -1,0 +1,7 @@
+autoload -U colors && colors
+
+export EDITOR="mvim -v"
+
+autoload -U ~/.dotfiles/zsh/functions/*(:t)
+
+PS1="%{$fg[magenta]%}%c%{$reset_color%} %{$fg[yellow]%}$(git_prompt)%{$reset_color%} ➝ "
