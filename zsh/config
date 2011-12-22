@@ -4,4 +4,6 @@ export EDITOR="mvim -v"
 
 autoload -U ~/.dotfiles/zsh/functions/*(:t)
 
-PS1="%{$fg[magenta]%}%c%{$reset_color%} %{$fg[yellow]%}$(git_prompt)%{$reset_color%} ➝ "
+PS1="%{$fg[magenta]%}%c%{$reset_color%} %{$fg[yellow]%}%{$reset_color%} ➝ "
+
+"/Users/sohrauer/.rvm/scripts/rvm" ]] && source "/Users/sohrauer/.rvm/scripts/rvm"  # This loads RVM into a shell session.
