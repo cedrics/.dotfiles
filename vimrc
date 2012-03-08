@@ -36,4 +36,4 @@ if has("gui_running")
 endif
 
 "Hotkeys"
-map <M-t> :CommandT<CR>
+map <M-t> :CommandTFlush:CommandT<CR>
