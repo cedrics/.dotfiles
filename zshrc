@@ -32,4 +32,8 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/config
 source $DOTFILES/zsh/aliases
 
+if [ -d "$DOTFILES/zsh/local" ]; then
+  source $DOTFILES/zsh/local/*
+fi
+
 PATH="$PATH:$HOME/bin"
