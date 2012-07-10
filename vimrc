@@ -13,7 +13,9 @@ set number
 set list listchars=tab:\ \ ,trail:·
 
 "Colorscheme"
-colorscheme railscasts
+syntax enable
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "Autoindentation"
 filetype indent plugin on
@@ -35,5 +37,24 @@ if has("gui_running")
     set guioptions=egmrt
 endif
 
-"Hotkeys"
-map <M-t> :CommandTFlush:CommandT<CR>
+"SWP DIR"
+set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
+
+"Sane Movement with wrap"
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+"Enable mouse support"
+set mouse=a
+
+"Copy to system clipboard"
+set clipboard=unnamed
