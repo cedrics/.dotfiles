@@ -3,6 +3,8 @@ set autoread
 "Allow working with buffers"
 set hidden
 
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+
 "Set leader to comma"
 let mapleader = ","
 
@@ -14,8 +16,7 @@ set list listchars=tab:\ \ ,trail:·
 
 "Colorscheme"
 syntax enable
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme wombat256
 
 "Autoindentation"
 filetype indent plugin on
@@ -58,3 +59,9 @@ set mouse=a
 
 "Copy to system clipboard"
 set clipboard=unnamed
+
+" Powerline config
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show unicode glyphs
+let g:Powerline_symbols = 'fancy'
