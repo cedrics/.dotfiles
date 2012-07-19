@@ -33,7 +33,9 @@ source $DOTFILES/zsh/config
 source $DOTFILES/zsh/aliases
 
 if [ -d "$DOTFILES/zsh/local" ]; then
-  source $DOTFILES/zsh/local/*
+  for file in $DOTFILES/zsh/local/* ; do
+    source $file
+  done
 fi
 
 PATH="$PATH:$HOME/bin"
