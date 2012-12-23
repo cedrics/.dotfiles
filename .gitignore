@@ -1,2 +1,4 @@
-*.swp
+*.sw*
+bin/*
+vim/.netrwhist
 **/local/*

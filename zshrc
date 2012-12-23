@@ -38,4 +38,4 @@ if [ -d "$DOTFILES/zsh/local" ]; then
   done
 fi
 
-PATH="$PATH:$HOME/bin"
+PATH="$PATH:$HOME/bin:/usr/local/share/npm/bin/"
