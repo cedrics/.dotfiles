@@ -43,7 +43,6 @@ set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 
 "Sane Movement with wrap"
-"
 vmap <D-j> gj
 vmap <D-k> gk
 vmap <D-4> g$
@@ -54,6 +53,9 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
+
+"ctrl-p"
+let g:ctrlp_map = '<Leader>t'
 
 "Enable mouse support"
 set mouse=a
