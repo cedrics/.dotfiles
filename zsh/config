@@ -4,4 +4,4 @@ export EDITOR="mvim -v"
 
 export GIT_SSL_NO_VERIFY=true
 
-"$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+eval "$(rbenv init -)"
