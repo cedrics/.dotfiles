@@ -29,8 +29,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-source $DOTFILES/zsh/config
-source $DOTFILES/zsh/aliases
+source $DOTFILES/zsh/config.sh
+source $DOTFILES/zsh/aliases.sh
 
 if [ -d "$DOTFILES/zsh/local" ]; then
   for file in $DOTFILES/zsh/local/* ; do

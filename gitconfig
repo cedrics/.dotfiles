@@ -1,0 +1,36 @@
+[user]
+  name = Cedric Sohrauer
+  email = cedric.sohrauer@infopark.com
+[include]
+  path=.githubconfig
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  sb = show-branch
+  di = diff
+  aa = add --all
+  serve = daemon --verbose --base-path=. --export-all
+  cont = rebase --continue
+  amend = commit --amend
+  unstaged = diff
+  staged = diff --cached
+  both = diff HEAD
+  oneline = log --pretty=oneline
+  tree = log --pretty=format:'%h %s' --graph --all -10
+[core]
+  legacyheaders = false
+  excludesfile = /Users/csohrauer/.gitignore
+  quotepath = false
+  editor = vim
+[branch]
+  autosetupmerge = true
+[repack]
+  usedeltabaseoffset = true
+[svn]
+  findcopiesharder = 1
+  rmdir = 1
