@@ -28,7 +28,10 @@ ZSH_THEME="cedric"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
 # Customize to your needs...
+PATH="/usr/local/bin:$PATH:$HOME/bin:/usr/local/share/npm/bin/"
+
 source $DOTFILES/zsh/config.sh
 source $DOTFILES/zsh/aliases.sh
 
@@ -38,4 +41,3 @@ if [ -d "$DOTFILES/zsh/local" ]; then
   done
 fi
 
-PATH="~/.rbenv/shims:$PATH:$HOME/bin:/usr/local/share/npm/bin/"
