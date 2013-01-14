@@ -1,9 +1,6 @@
 [submodule "vim/bundle/rails"]
 	path = vim/bundle/rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/matchit"]
-	path = vim/bundle/matchit
-	url = https://github.com/mhz/vim-matchit.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -34,3 +31,6 @@
 [submodule "vim/bundle/less"]
   path = vim/bundle/less
   url = https://github.com/groenewege/vim-less.git
+[submodule "vim/bundle/ack"]
+  path = vim/bundle/ack
+  url = git@github.com:mileszs/ack.vim.git
