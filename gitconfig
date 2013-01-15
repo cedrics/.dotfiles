@@ -22,6 +22,7 @@
   both = diff HEAD
   oneline = log --pretty=oneline
   tree = log --pretty=format:'%h %s' --graph --all -10
+  l="!source ~/.gitcommands && git_l"
 [core]
   legacyheaders = false
   excludesfile = /Users/csohrauer/.gitignore

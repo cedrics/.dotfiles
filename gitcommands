@@ -1,0 +1,10 @@
+HASH='%C(yellow)%h%Creset'
+TIME='%C(green)%ar%Creset'
+USER='%C(cyan bold)%an%Creset'
+REFS='%C(red)%d%Creset'
+MSG='%s'
+
+git_l() {
+  git log --graph --pretty=tformat:"$HASH{$TIME{$USER{$REFS $MSG" $* |
+  column -s "{" -t
+}
