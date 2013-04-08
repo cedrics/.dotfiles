@@ -6,5 +6,6 @@ MSG='%s'
 
 git_l() {
   git log --graph --pretty=tformat:"$HASH{$TIME{$USER{$REFS $MSG" $* |
-  column -s "{" -t
+  column -s "{" -t |
+  less -FXSR
 }

@@ -1,6 +1,6 @@
 [user]
   name = Cedric Sohrauer
-  email = cedric.sohrauer@infopark.com
+  email = cedric.sohrauer@infopark.de
 [include]
   path=.githubconfig
 [color]
@@ -35,3 +35,5 @@
 [svn]
   findcopiesharder = 1
   rmdir = 1
+[push]
+	default = simple

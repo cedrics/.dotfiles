@@ -8,29 +8,12 @@ ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="cedric"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH="/usr/local/bin:$PATH:$HOME/bin:/usr/local/share/npm/bin"
+PATH="/usr/local/bin:$PATH:$HOME/bin:/usr/local/share/npm/bin:$DOTFILES/bin"
 
 source $DOTFILES/zsh/config.sh
 source $DOTFILES/zsh/aliases.sh
@@ -46,3 +29,5 @@ function auto_load_path {
 auto_load_path $DOTFILES/zsh/local
 auto_load_path $DOTFILES/zsh/commands
 
+# Disable auto title in tmux
+DISABLE_AUTO_TITLE=true
