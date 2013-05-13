@@ -1,5 +1,26 @@
 set autoread
 
+"BUNDLE"
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'ervandew/supertab'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-endwise'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-haml'
+Bundle 'nono/vim-handlebars'
+Bundle 'groenewege/vim-less'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-rails'
+
 "Allow working with buffers"
 set hidden
 
@@ -23,9 +44,6 @@ filetype indent plugin on
 
 "Automatically reload vimrc when it is changed"
 autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc
-
-"Load Pathogen"
-call pathogen#infect()
 
 "Soft Tabs"
 set tabstop=2
@@ -59,17 +77,6 @@ let g:ctrlp_map = '<c-p>'
 
 "Enable mouse support"
 set mouse=a
-
-"Rspec command"
-let g:turbux_command_rspec = 'rbenv exec spring rspec'
-
-function! CloseVimuxIfInTmux()
-  if ($TERM == 'screen' && !empty($TMUX))
-    :call VimuxClosePanes()
-  endif
-endfunction
-
-autocmd VimLeave * :call CloseVimuxIfInTmux()
 
 " Powerline config
 set nocompatible   " Disable vi-compatibility
