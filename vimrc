@@ -55,13 +55,21 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 "ctrl-p"
-let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_map = '<c-p>'
 
 "Enable mouse support"
 set mouse=a
 
-"Copy to system clipboard"
-set clipboard=unnamed
+"Rspec command"
+let g:turbux_command_rspec = 'rbenv exec spring rspec'
+
+function! CloseVimuxIfInTmux()
+  if ($TERM == 'screen' && !empty($TMUX))
+    :call VimuxClosePanes()
+  endif
+endfunction
+
+autocmd VimLeave * :call CloseVimuxIfInTmux()
 
 " Powerline config
 set nocompatible   " Disable vi-compatibility
