@@ -1,5 +1,7 @@
 set autoread
 
+set shell=zsh
+
 "BUNDLE"
 set nocompatible
 filetype off
@@ -20,6 +22,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
+Bundle 'wting/rust.vim'
 
 "Allow working with buffers"
 set hidden
@@ -83,3 +86,6 @@ set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 let g:Powerline_symbols = 'fancy'
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%100v.\+/
