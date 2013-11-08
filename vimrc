@@ -10,7 +10,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
@@ -23,6 +22,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'wting/rust.vim'
+Bundle 'rking/ag.vim'
 
 "Allow working with buffers"
 set hidden
