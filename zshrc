@@ -31,3 +31,9 @@ auto_load_path $DOTFILES/zsh/commands
 
 # Disable auto title in tmux
 DISABLE_AUTO_TITLE=true
+
+alias tmux="tmux -2"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
