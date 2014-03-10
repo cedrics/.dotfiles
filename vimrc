@@ -23,6 +23,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'wting/rust.vim'
 Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdtree'
 
 "Allow working with buffers"
 set hidden
