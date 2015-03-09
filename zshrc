@@ -13,10 +13,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH="/usr/local/bin:$PATH:$HOME/bin:/usr/local/share/npm/bin:$DOTFILES/bin"
+PATH="/usr/local/bin:$PATH:$HOME/.bin:/usr/local/share/npm/bin:$HOME/Documents/Library/android-sdk/platform-tools"
 
 source $DOTFILES/zsh/config.sh
 source $DOTFILES/zsh/aliases.sh
+
+source $(brew --prefix nvm)/nvm.sh
 
 function auto_load_path {
   if [ -d "$1" ]; then
@@ -37,3 +39,6 @@ alias tmux="tmux -2"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

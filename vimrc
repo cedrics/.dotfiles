@@ -17,13 +17,18 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-endwise'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-surround'
 Bundle 'nono/vim-handlebars'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'wting/rust.vim'
-Bundle 'rking/ag.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'mattn/emmet-vim'
+Bundle 'mxw/vim-jsx'
+Bundle 'mtscout6/vim-cjsx'
+Bundle 'elixir-lang/vim-elixir'
 
 "Allow working with buffers"
 set hidden
@@ -87,6 +92,8 @@ set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 let g:Powerline_symbols = 'fancy'
+
+au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
