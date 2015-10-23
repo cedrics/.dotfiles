@@ -3,32 +3,36 @@ set autoread
 set shell=zsh
 
 "BUNDLE"
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-endwise'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-surround'
-Bundle 'nono/vim-handlebars'
-Bundle 'groenewege/vim-less'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-rails'
-Bundle 'wting/rust.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mattn/emmet-vim'
-Bundle 'mxw/vim-jsx'
-Bundle 'mtscout6/vim-cjsx'
-Bundle 'elixir-lang/vim-elixir'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'ervandew/supertab'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-endwise'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-surround'
+Plugin 'nono/vim-handlebars'
+Plugin 'groenewege/vim-less'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-rails'
+Plugin 'wting/rust.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'elixir-lang/vim-elixir'
+
+call vundle#end()
 
 "Allow working with buffers"
 set hidden
@@ -83,6 +87,16 @@ nmap <D-0> g^
 
 "ctrl-p"
 let g:ctrlp_map = '<c-p>'
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 "Enable mouse support"
 set mouse=a

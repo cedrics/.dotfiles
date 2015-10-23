@@ -5,3 +5,5 @@ alias vim='mvim -v'
 alias be='bundle exec'
 
 alias pcat='pygmentize'
+
+alias gm='/usr/local/bin/gm'

@@ -42,3 +42,6 @@ export LANGUAGE=en_US.UTF-8
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/csohrauer/.travis/travis.sh ] && source /Users/csohrauer/.travis/travis.sh
