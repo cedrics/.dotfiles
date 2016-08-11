@@ -24,13 +24,16 @@ Plugin 'nono/vim-handlebars'
 Plugin 'groenewege/vim-less'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tpope/vim-rails'
-Plugin 'wting/rust.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'isRuslan/vim-es6'
 
 call vundle#end()
 
