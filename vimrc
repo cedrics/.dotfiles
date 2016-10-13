@@ -67,6 +67,10 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+"Fix backspace key"
+set backspace=2
+fixdel
+
 "Remove GUI"
 if has("gui_running")
     set guioptions=egmrt
