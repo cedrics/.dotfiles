@@ -6,14 +6,14 @@ set shell=zsh
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set rtp+=/usr/local/opt/fzf
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'garbas/vim-snipmate'
+Plugin 'junegunn/fzf.vim'
 
 " language
 Plugin 'tpope/vim-haml'
@@ -53,6 +53,13 @@ set number
 
 "Show trailing white spaces"
 set list listchars=tab:\ \ ,trail:·
+
+"Open FZF using Ctrl-P
+nnoremap <c-p> :GFiles<cr>
+
+"Grep using ag
+set grepprg=ag\ --nogroup\ --nocolor
+let g:ackprg = 'ag --vimgrep'
 
 "Colorscheme"
 syntax enable
@@ -94,19 +101,6 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
-
-"ctrl-p"
-let g:ctrlp_map = '<c-p>'
-
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
-
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 "Enable mouse support"
 set mouse=a
