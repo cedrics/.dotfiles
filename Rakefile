@@ -12,7 +12,7 @@ end
 
 desc 'Creates all sym-links'
 task :setup do
-  %w{vim vimrc gvimrc oh-my-zsh zshrc tmux.conf gitconfig githubconfig gitcommands}.each do |file|
+  %w{vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands}.each do |file|
     ln_sym(relative_file(file),  relative_file("../.#{file}"))
   end
 
