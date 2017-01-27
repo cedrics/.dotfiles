@@ -5,3 +5,6 @@ vim/.netrwhist
 githubconfig
 vim/bundle
 vim/tmp
+
+fish/*
+!fish/*.fish
