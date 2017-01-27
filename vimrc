@@ -1,6 +1,6 @@
 set autoread
 
-set shell=zsh
+set shell=fish
 
 "BUNDLE"
 set nocompatible              " be iMproved, required
@@ -10,35 +10,28 @@ set rtp+=/usr/local/opt/fzf
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 
 " language
-Plugin 'tpope/vim-haml'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'nono/vim-handlebars'
-Plugin 'tpope/vim-rails'
-Plugin 'mxw/vim-jsx'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'isRuslan/vim-es6'
-Plugin 'mtscout6/vim-cjsx'
+Plug 'sheerun/vim-polyglot'
 
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ervandew/supertab'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mattn/emmet-vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
+Plug 'Lokaltog/vim-powerline'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mattn/emmet-vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
 
-call vundle#end()
+Plug 'micha/vim-colors-solarized'
+
+call plug#end()
 
 "Allow working with buffers"
 set hidden
@@ -63,7 +56,9 @@ let g:ackprg = 'ag --vimgrep'
 
 "Colorscheme"
 syntax enable
-colorscheme wombat256
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 "Autoindentation"
 filetype indent plugin on
