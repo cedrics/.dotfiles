@@ -76,11 +76,6 @@ set expandtab
 set backspace=2
 fixdel
 
-"Remove GUI"
-if has("gui_running")
-    set guioptions=egmrt
-endif
-
 "SWP DIR"
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
