@@ -1,4 +1,5 @@
 set -g -x PATH /usr/local/bin $PATH
+set -g -x PATH (yarn global bin) $PATH
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/commands/p.fish
