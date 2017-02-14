@@ -1,6 +1,6 @@
 set autoread
 
-set shell=fish
+set shell=/bin/bash
 
 "BUNDLE"
 set nocompatible              " be iMproved, required
@@ -56,7 +56,7 @@ let g:ackprg = 'ag --vimgrep'
 
 "Colorscheme"
 syntax enable
-let g:solarized_termcolors=256
+set synmaxcol=200
 set background=dark
 colorscheme solarized
 
