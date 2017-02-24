@@ -1,8 +1,13 @@
 set -g -x PATH /usr/local/bin $PATH
+set -g -x PATH ~/.bin $PATH
 set -g -x PATH (yarn global bin) $PATH
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/commands/p.fish
+
+if test -d ~/.config/fish/local
+  source (ls -d ~/.config/fish/local/*)
+end
 
 # Configure rebenv
 status --is-interactive; and source (rbenv init -|psub)
