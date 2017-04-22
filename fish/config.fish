@@ -1,3 +1,4 @@
+set -g -x PATH ~/.yarn/bin $PATH
 set -g -x PATH /usr/local/bin $PATH
 set -g -x PATH ~/.bin $PATH
 set -g -x PATH (yarn global bin) $PATH
