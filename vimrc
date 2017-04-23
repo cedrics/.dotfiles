@@ -18,6 +18,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -97,6 +99,7 @@ set mouse=a
 
 "Airline Config"
 let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 set laststatus=2
 
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
