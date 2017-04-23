@@ -17,9 +17,9 @@ Plug 'junegunn/fzf.vim'
 " language
 Plug 'sheerun/vim-polyglot'
 
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
-Plug 'Lokaltog/vim-powerline'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
@@ -95,11 +95,9 @@ nmap <D-0> g^
 "Enable mouse support"
 set mouse=a
 
-" Powerline config
-set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show unicode glyphs
-let g:Powerline_symbols = 'fancy'
+"Airline Config"
+let g:airline_powerline_fonts = 1
+set laststatus=2
 
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
