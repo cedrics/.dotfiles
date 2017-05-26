@@ -59,7 +59,7 @@ let g:ackprg = 'ag --vimgrep'
 "Colorscheme"
 syntax enable
 set synmaxcol=200
-set background=dark
+set background=light
 colorscheme solarized
 
 "Autoindentation"
