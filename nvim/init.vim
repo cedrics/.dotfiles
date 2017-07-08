@@ -21,7 +21,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'ruanyl/vim-fixmyjs'
+Plug 'sbdchd/neoformat'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
@@ -68,9 +68,6 @@ colorscheme solarized
 "Autoindentation"
 filetype indent plugin on
 
-"Automatically reload vimrc when it is changed"
-autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc
-
 "Soft Tabs"
 set tabstop=2
 set softtabstop=2
@@ -107,7 +104,5 @@ set laststatus=2
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 " Fix JS on sae
-let g:fixmyjs_use_local = 1
-let g:fixmyjs_rc_path = '~/projects/my/.eslintrc.js'
-au BufWritePre *.js :Fixmyjs
-au BufWritePre *.jsx :Fixmyjs
+au BufWritePre *.js :Neoformat prettier
+au BufWritePre *.jsx :Neoformat prettier
