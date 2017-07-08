@@ -2,6 +2,8 @@ set -g -x PATH /usr/local/bin $PATH
 set -g -x PATH (yarn global bin) $PATH
 set -g -x PATH ~/.nodenv/bin $PATH
 
+set -g -x EDITOR nvim
+
 source ~/.config/fish/alias.fish
 source ~/.config/fish/commands/p.fish
 

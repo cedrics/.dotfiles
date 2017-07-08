@@ -27,7 +27,6 @@
   legacyheaders = false
   excludesfile = /Users/csohrauer/.gitignore
   quotepath = false
-  editor = vim
 [branch]
   autosetupmerge = true
 [repack]
