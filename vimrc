@@ -12,6 +12,7 @@ set rtp+=/usr/local/opt/fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin()
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " language
@@ -19,6 +20,8 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'ruanyl/vim-fixmyjs'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
@@ -104,5 +107,8 @@ set laststatus=2
 
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%100v.\+/
+" Fix JS on sae
+let g:fixmyjs_use_local = 1
+let g:fixmyjs_rc_path = '~/projects/my/.eslintrc.js'
+au BufWritePre *.js :Fixmyjs
+au BufWritePre *.jsx :Fixmyjs
