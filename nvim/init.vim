@@ -104,5 +104,17 @@ set laststatus=2
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 " Fix JS on sae
-au BufWritePre *.js :Neoformat prettier
-au BufWritePre *.jsx :Neoformat prettier
+let g:neoformat_javascript_prettier = {
+            \ 'exe': 'prettier',
+            \ 'args': ['--single-quote', '--trailing-comma all'],
+            \ }
+
+function! neoformat#formatters#javascript#prettiereslint() abort
+  return {
+    \ 'exe': 'prettier-eslint',
+    \ 'args': ['--stdin'],
+    \ 'stdin': 1,
+    \ }
+endfunction
+
+let g:neoformat_enabled_javascript = ['prettiereslint']
