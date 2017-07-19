@@ -54,3 +54,7 @@ end
 
 # Setup nodenv
 status --is-interactive; and source (nodenv init -|psub)
+
+# Setup go
+set -g -x GOPATH ~/projects/go
+set -g -x PATH $GOPATH/bin $PATH
