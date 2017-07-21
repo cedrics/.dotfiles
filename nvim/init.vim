@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
@@ -104,4 +105,7 @@ set laststatus=2
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 " Fix JS on sae
-au BufWritePre *.go :Neoformat
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+
+autocmd! BufWritePost * Neomake
