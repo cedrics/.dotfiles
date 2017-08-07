@@ -1,6 +1,6 @@
 set -g -x PATH /usr/local/bin $PATH
 set -g -x PATH (yarn global bin) $PATH
-set -g -x PATH ~/.nodenv/bin $PATH
+set -g -x PATH node_modules/.bin $PATH
 
 set -g -x EDITOR nvim
 
@@ -11,8 +11,9 @@ if test -d ~/.config/fish/local
   source (ls -d ~/.config/fish/local/*)
 end
 
-# Configure rebenv
+# Configure rbenv and nodenv
 status --is-interactive; and source (rbenv init -|psub)
+status --is-interactive; and source (nodenv init -|psub)
 
 # Prompt
 set normal (set_color normal)
@@ -52,8 +53,6 @@ function fish_prompt
   set_color normal
 end
 
-# Setup nodenv
-status --is-interactive; and source (nodenv init -|psub)
 
 # Setup go
 set -g -x GOPATH ~/projects/go
