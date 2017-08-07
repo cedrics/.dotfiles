@@ -22,9 +22,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
 
 Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
@@ -104,5 +108,23 @@ set laststatus=2
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 " Fix JS on sae
-au BufWritePre *.js :Neoformat prettier
-au BufWritePre *.jsx :Neoformat prettier
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+
+autocmd! BufReadPost,BufWritePost * Neomake
+
+let g:neoformat_enabled_javascript = ['prettier-eslint']
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" tern
+autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
+let g:deoplete#enable_at_startup = 1
+" tern
+if exists('g:plugs["tern_for_vim"]')
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 1
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+endif
