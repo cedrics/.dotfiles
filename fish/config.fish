@@ -1,8 +1,8 @@
 set -g -x PATH /usr/local/bin $PATH
 set -g -x PATH (yarn global bin) $PATH
-set -g -x PATH node_modules/.bin $PATH
 
 set -g -x EDITOR nvim
+fish_vi_key_bindings
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/commands/p.fish
