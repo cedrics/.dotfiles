@@ -15,6 +15,8 @@ end
 status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and source (nodenv init -|psub)
 
+set -g -x PATH node_modules/.bin $PATH
+
 # Prompt
 set normal (set_color normal)
 set magenta (set_color magenta)
