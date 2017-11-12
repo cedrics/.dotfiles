@@ -114,6 +114,7 @@ let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 autocmd! BufReadPost,BufWritePost * Neomake
 
 let g:neoformat_enabled_javascript = ['prettier-eslint']
+let g:neoformat_enabled_ruby = ['rubocop']
 
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
