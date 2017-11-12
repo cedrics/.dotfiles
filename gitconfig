@@ -25,7 +25,7 @@
   l="!source ~/.gitcommands && git_l"
 [core]
   legacyheaders = false
-  excludesfile = /Users/csohrauer/.gitignore
+  excludesfile = ~/.gitignore
   quotepath = false
   editor = nvim
 [branch]
