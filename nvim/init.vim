@@ -38,7 +38,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
-Plug 'micha/vim-colors-solarized'
+Plug 'jdkanani/vim-material-theme'
 
 call plug#end()
 
@@ -63,11 +63,13 @@ nnoremap <c-p> :GFiles<cr>
 set grepprg=ag\ --nogroup\ --nocolor
 let g:ackprg = 'ag --vimgrep'
 
-"Colorscheme"
+"Colorscheme
 syntax enable
+set termguicolors
 set synmaxcol=200
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme material-theme
+let g:enable_bold_font = 1
 
 "Autoindentation"
 filetype indent plugin on
