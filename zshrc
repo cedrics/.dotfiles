@@ -1,5 +1,9 @@
 export DOTFILES=~/.dotfiles
 
+## Ctrl+W stops at /
+autoload -U select-word-style
+select-word-style bash
+
 source $DOTFILES/zsh/deps.zsh
 
 export EDITOR=nvim
