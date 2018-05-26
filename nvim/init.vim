@@ -27,7 +27,10 @@ Plug 'neomake/neomake'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/emmet-vim'
@@ -37,6 +40,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 Plug 'hzchirs/vim-material'
 
