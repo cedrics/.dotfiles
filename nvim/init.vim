@@ -38,7 +38,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
-Plug 'jdkanani/vim-material-theme'
+Plug 'hzchirs/vim-material'
 
 call plug#end()
 
@@ -68,7 +68,7 @@ syntax enable
 set termguicolors
 set synmaxcol=200
 set background=dark
-colorscheme material-theme
+colorscheme vim-material
 let g:enable_bold_font = 1
 
 "Autoindentation"
@@ -104,7 +104,7 @@ set mouse=a
 
 "Airline Config"
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='material'
 set laststatus=2
 
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
