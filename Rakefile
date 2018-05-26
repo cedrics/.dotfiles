@@ -1,6 +1,6 @@
 require 'fileutils'
 
-HOME_COFIG = %w{vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands}
+HOME_COFIG = %w{vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands zshrc}
 XDG_CONFIG = %w{fish nvim}
 
 def ln_sym(old, target)
