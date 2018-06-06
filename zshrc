@@ -12,13 +12,14 @@ alias vim=nvim
 alias be="bundle exec"
 alias git=hub
 
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
-eval "$(goenv init -)"
-
 export GOPATH=~/projects/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=~/.bin:$PATH
+export PATH=node_modules/.bin:$PATH
+
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+eval "$(goenv init -)"
 
 bindkey -e
 
