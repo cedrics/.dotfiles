@@ -8,6 +8,8 @@ select-word-style bash
 
 source $DOTFILES/zsh/deps.zsh
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export EDITOR=nvim
 
 alias vim=nvim
