@@ -12,7 +12,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export EDITOR=nvim
 
-alias vim=nvim
+alias vim=/Users/cedric/.local/bin/lvim
 alias be="bundle exec"
 alias git=hub
 
@@ -47,6 +47,12 @@ for command in $DOTFILES/zsh/commands/*; do
   source "$command"
 done
 
+
+
+# pnpm
+export PNPM_HOME="/Users/cedric/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
