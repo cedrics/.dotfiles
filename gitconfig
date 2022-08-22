@@ -27,7 +27,7 @@
   legacyheaders = false
   excludesfile = ~/.gitignore
   quotepath = false
-  editor = nvim
+  editor = vim
 [branch]
   autosetupmerge = true
 [repack]
@@ -36,6 +36,6 @@
   findcopiesharder = 1
   rmdir = 1
 [push]
-	default = simple
+  default = simple
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/

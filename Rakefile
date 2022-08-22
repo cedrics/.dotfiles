@@ -1,16 +1,14 @@
 require 'fileutils'
 
-HOME_COFIG = %w{vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands zshrc}
-XDG_CONFIG = %w{fish nvim}
+HOME_COFIG = %w[vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands gitignore zshrc].freeze
+XDG_CONFIG = %w[nvim].freeze
 
 def ln_sym(old, target)
-  unless File.exist?(target) || File.symlink?(target)
-    FileUtils.ln_s(old, target)
-  end
+  FileUtils.ln_s(old, target) unless File.exist?(target) || File.symlink?(target)
 end
 
 def relative_path(path)
-  File.expand_path(File.join("../", path), __FILE__)
+  File.expand_path(File.join('../', path), __FILE__)
 end
 
 desc 'Creates all sym-links'
@@ -30,4 +28,4 @@ task :setup do
   sym_links.each(&method(:ln_sym))
 end
 
-task :default => [:setup]
+task default: [:setup]
