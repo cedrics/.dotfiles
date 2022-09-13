@@ -19,7 +19,7 @@ alias git=hub
 export GOPATH=~/projects/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=~/.bin:$PATH
-export PATH=node_modules/.bin:$PATH
+export PATH=node_modules/.bin:../node_modules/.bin:$PATH
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
