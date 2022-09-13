@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export DOTFILES=~/.dotfiles
 
 ## Ctrl+W stops at /
@@ -19,7 +19,7 @@ alias git=hub
 export GOPATH=~/projects/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=~/.bin:$PATH
-export PATH=node_modules/.bin:$PATH
+export PATH=node_modules/.bin:../node_modules/.bin:$PATH
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
@@ -47,7 +47,8 @@ for command in $DOTFILES/zsh/commands/*; do
   source "$command"
 done
 
-
+# Add postgres CMD line tools
+export PATH=/Applications/Postgres.app/Contents/Versions/14/bin:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/cedric/Library/pnpm"
@@ -55,4 +56,4 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
