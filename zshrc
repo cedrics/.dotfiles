@@ -47,7 +47,8 @@ for command in $DOTFILES/zsh/commands/*; do
   source "$command"
 done
 
-
+# Add postgres CMD line tools
+export PATH=/Applications/Postgres.app/Contents/Versions/14/bin:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/cedric/Library/pnpm"
