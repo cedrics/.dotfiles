@@ -27,7 +27,7 @@
   legacyheaders = false
   excludesfile = ~/.gitignore
   quotepath = false
-  editor = vim
+  editor = lvim
 [branch]
   autosetupmerge = true
 [repack]

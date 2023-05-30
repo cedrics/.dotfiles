@@ -10,7 +10,7 @@ source $DOTFILES/zsh/deps.zsh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export EDITOR=nvim
+export EDITOR=lvim
 
 alias vim=/Users/cedric/.local/bin/lvim
 alias be="bundle exec"
