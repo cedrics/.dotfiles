@@ -14,7 +14,8 @@ export EDITOR=lvim
 
 alias vim=/Users/cedric/.local/bin/lvim
 alias be="bundle exec"
-alias git=hub
+
+eval "$(hub alias -s)"
 
 export GOPATH=~/projects/go
 export PATH=$GOPATH/bin:$PATH
@@ -24,6 +25,7 @@ export PATH=node_modules/.bin:../node_modules/.bin:$PATH
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(goenv init -)"
+eval "$(pyenv init -)"
 
 bindkey -e
 
@@ -47,6 +49,10 @@ for command in $DOTFILES/zsh/commands/*; do
   source "$command"
 done
 
+for command in $DOTFILES/zsh/completions/*; do
+  source "$command"
+done
+
 # Add postgres CMD line tools
 export PATH=/Applications/Postgres.app/Contents/Versions/14/bin:$PATH
 
@@ -54,6 +60,14 @@ export PATH=/Applications/Postgres.app/Contents/Versions/14/bin:$PATH
 export PNPM_HOME="/Users/cedric/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cedric/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cedric/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
