@@ -8,9 +8,9 @@ source $DOTFILES/zsh/deps.zsh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export EDITOR=lvim
+export EDITOR=nvim
 
-alias vim=/Users/cedric/.local/bin/lvim
+alias vim=/opt/homebrew/bin/nvim
 alias be="bundle exec"
 
 eval "$(hub alias -s)"
