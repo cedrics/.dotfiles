@@ -1,7 +1,7 @@
 [user]
   name = Cedric Sohrauer
   email = sohrauer@gmail.com
-	signingkey = /Users/cedric/.ssh/id_rsa.pub
+  signingkey = /Users/cedric/.ssh/id_rsa.pub
 [include]
   path=.githubconfig
 [color]
@@ -57,3 +57,7 @@
 	insteadOf = https://github.com/
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[commit]
+	gpgsign = true
+[maintenance]
+	repo = /Users/cedric/projects/api
