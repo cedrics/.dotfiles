@@ -15,8 +15,6 @@ alias be="bundle exec"
 
 eval "$(hub alias -s)"
 
-export GOPATH=~/projects/go
-export PATH=$GOPATH/bin:$PATH
 export PATH=~/.bin:$PATH
 export PATH=node_modules/.bin:../node_modules/.bin:$PATH
 
