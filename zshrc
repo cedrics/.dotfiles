@@ -67,3 +67,6 @@ if [ -f '/Users/cedric/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/cedric/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
