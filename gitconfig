@@ -1,6 +1,7 @@
 [user]
   name = Cedric Sohrauer
   email = sohrauer@gmail.com
+  signingkey = /Users/cedric/.ssh/id_rsa.pub
 [include]
   path=.githubconfig
 [color]
@@ -27,7 +28,8 @@
   legacyheaders = false
   excludesfile = ~/.gitignore
   quotepath = false
-  editor = vim
+  editor = nvim
+  pager = delta
 [branch]
   autosetupmerge = true
 [repack]
@@ -37,5 +39,25 @@
   rmdir = 1
 [push]
   default = simple
+[gpg]
+	format = ssh
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 [url "git@github.com:"]
-  insteadOf = https://github.com/
+	insteadOf = https://github.com/
+[commit]
+	gpgsign = true
+[maintenance]
+	repo = /Users/cedric/projects/api

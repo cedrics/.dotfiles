@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 export DOTFILES=~/.dotfiles
 
 ## Ctrl+W stops at /
@@ -12,18 +10,18 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export EDITOR=nvim
 
-alias vim=/Users/cedric/.local/bin/lvim
+alias vim=/opt/homebrew/bin/nvim
 alias be="bundle exec"
-alias git=hub
 
-export GOPATH=~/projects/go
-export PATH=$GOPATH/bin:$PATH
+eval "$(hub alias -s)"
+
 export PATH=~/.bin:$PATH
-export PATH=node_modules/.bin:$PATH
+export PATH=node_modules/.bin:../node_modules/.bin:$PATH
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(goenv init -)"
+eval "$(pyenv init -)"
 
 bindkey -e
 
@@ -47,12 +45,26 @@ for command in $DOTFILES/zsh/commands/*; do
   source "$command"
 done
 
+for command in $DOTFILES/zsh/completions/*; do
+  source "$command"
+done
 
+# Add postgres CMD line tools
+export PATH=/Applications/Postgres.app/Contents/Versions/14/bin:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/cedric/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cedric/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cedric/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cedric/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/cedric/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
