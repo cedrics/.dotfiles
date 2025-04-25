@@ -1,6 +1,6 @@
 require 'fileutils'
 
-HOME_COFIG = %w[vim vimrc gvimrc tmux.conf gitconfig githubconfig gitcommands gitignore zshrc].freeze
+HOME_COFIG = %w[vim vimrc gvimrc gitconfig githubconfig gitcommands gitignore zshrc].freeze
 XDG_CONFIG = %w[nvim kitty].freeze
 
 def ln_sym(old, target)
