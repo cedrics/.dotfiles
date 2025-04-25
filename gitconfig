@@ -28,7 +28,7 @@
   legacyheaders = false
   excludesfile = ~/.gitignore
   quotepath = false
-  editor = lvim
+  editor = nvim
   pager = delta
 [branch]
   autosetupmerge = true
